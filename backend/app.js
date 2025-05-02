@@ -26,7 +26,7 @@ const allowedOrigins = [
 app.use(express.json());
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: 'http://localhost:3000',
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
@@ -46,5 +46,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is listening on http://localhost:${port}`);
+  console.log(`Server is listening on http://localhost:5000`);
 });
